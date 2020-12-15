@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2011, 2016 Obeo Cedric Brun <cedric.brun@obeo.fr> -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	
+  	<groupId>org.eclipse.gemoc.gemoc_studio</groupId>
+	<artifactId>org.eclipse.gemoc.gemoc-studio-xcapella</artifactId>
+	<packaging>eclipse-repository</packaging>
+	<version>3.3.0-SNAPSHOT</version>
+	
+	
+	<properties>
+		<tycho-version>1.7.0</tycho-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<xtend.version>2.21.0</xtend.version>
+    	
+    	<eclipse.release.p2.url>http://download.eclipse.org/releases/2020-03</eclipse.release.p2.url>
+    	<eclipse.photon.release.p2.url>http://download.eclipse.org/releases/photon</eclipse.photon.release.p2.url>
+		<k3.p2.url>http://www.kermeta.org/k3/update_2018-09-05</k3.p2.url>
+		<ale.p2.url>http://www.kermeta.org/ale-lang/updates/2020-07-17</ale.p2.url>
+		<!-- <ale.p2.url>https://ci.inria.fr/gemoc/job/ale-lang/job/bump-to-eclipse-2020-03/lastSuccessfulBuild/artifact/releng/org.eclipse.emf.ecoretools.ale.updatesite/target/repository/</ale.p2.url>-->
+		<melange.p2.url>http://melange.inria.fr/updatesite/nightly/update_2020-06-19</melange.p2.url>
+		<elk.p2.url>http://download.eclipse.org/elk/updates/releases/0.4.1</elk.p2.url>
+		<app4mc.p2.url>http://download.eclipse.org/app4mc/updatesites/releases/0.8.1</app4mc.p2.url>
+		<aspectJ.p2.url>http://download.eclipse.org/tools/ajdt/410/dev/update</aspectJ.p2.url>
+		<!-- <timesquare.p2.url>http://www.i3s.unice.fr/~deantoni/photon/</timesquare.p2.url> -->
+		<timesquare.p2.url>http://timesquare.inria.fr/update_site/2020</timesquare.p2.url>
+		<diverse-commons.p2.url>http://www.kermeta.org/diverse-commons/updates/latest</diverse-commons.p2.url>
+		<sirius.p2.url>http://download.eclipse.org/sirius/updates/releases/6.1.3/photon</sirius.p2.url>
+		<efxclipse.p2.url>https://download.eclipse.org/efxclipse/updates-released/3.6.0/site</efxclipse.p2.url>
+		<maven.deploy.skip>true</maven.deploy.skip>
+	</properties>
+	
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/filtered-resources</directory>
+				<filtering>true</filtering>
+				<targetPath>${project.build.directory}/</targetPath>
+			</resource>
+		</resources>
+		<plugins>
+			<!-- create a timestamp for the filter -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>create-timestamp</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<timestampFormat>yyyy-MM-dd HH:mm, z</timestampFormat>
+					<timestampPropertyName>timestamp</timestampPropertyName>
+					<timezone>UTC</timezone>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-repository-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<includeAllDependencies>true</includeAllDependencies>
+				</configuration>
+			</plugin>
+			
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-repository-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<includeAllDependencies>true</includeAllDependencies>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>create-distributions</id>
+						<goals>
+							<goal>materialize-products</goal>
+							<goal>archive-products</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<products>
+						<product>
+							<!-- select product with ID product.id; the archives get the classifiers 
+								"<os>.<ws>.<arch>" -->
+							<id>gemoc-studio-xcapella</id>
+						</product>
+					</products>
+			  </configuration>
+			</plugin>
+			
+		    <plugin>
+		     <groupId>org.eclipse.tycho</groupId>
+		     <artifactId>tycho-p2-plugin</artifactId>
+		     <version>${tycho-version}</version>
+		     <executions>
+		       <execution>
+		         <id>attach-p2-metadata</id>
+		         <phase>package</phase>
+		         <goals>
+		           <goal>p2-metadata</goal>
+		         </goals>
+		       </execution>
+		     </executions>
+		    </plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<!-- environments that will be built -->
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<!-- <environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment> -->
+					</environments>
+					<target>
+						<artifact>
+							<groupId>${project.groupId}</groupId>
+							<artifactId>${project.artifactId}</artifactId>
+							<version>${project.version}</version>
+							<classifier>
+								tpd/gemoc-3-2-0
+							</classifier>
+						</artifact>
+					</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
