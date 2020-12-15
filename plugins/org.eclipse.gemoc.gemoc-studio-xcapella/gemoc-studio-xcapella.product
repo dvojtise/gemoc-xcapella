@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="org.eclipse.gemoc.gemoc-studio-xcapella" uid="gemoc-studio-xcapella" id="org.eclipse.gemoc.gemoc_studio.branding.gemoc_studio" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Gemoc Studio xCapella" uid="gemoc-studio-xcapella" id="org.eclipse.gemoc.gemoc_studio.branding.gemoc_studio" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
 
    <configIni use="default">
    </configIni>
@@ -15,15 +16,18 @@
 
    <windowImages/>
 
+
    <launcher>
       <win useIco="false">
          <bmp/>
       </win>
    </launcher>
 
+
    <vm>
       <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</linux>
    </vm>
+
 
    <plugins>
    </plugins>
@@ -38,13 +42,11 @@
       <feature id="org.eclipse.sirius.runtime.ide.ui"/>
       <feature id="org.eclipse.egit"/>
       <feature id="org.eclipse.emf.ecoretools.design"/>
-      <feature id="org.eclipse.emf.query.ocl.source"/>
       <feature id="org.eclipse.wst.common_core.feature"/>
       <feature id="org.eclipse.ecf.core.ssl.feature"/>
       <feature id="org.eclipse.m2m.qvt.oml.sdk"/>
       <feature id="org.eclipse.gef"/>
       <feature id="fr.inria.aoste.timesquare.feature"/>
-      <feature id="org.eclipse.gemoc.moccml.constraint.feature.source"/>
       <feature id="org.eclipse.emf.codegen.ui"/>
       <feature id="fr.inria.diverse.k3.feature"/>
       <feature id="org.eclipse.gemoc.xdsmlframework.feature"/>
@@ -53,20 +55,13 @@
       <feature id="org.eclipse.gemoc.moccml.mapping.feedback.model.feature"/>
       <feature id="fr.inria.aoste.timesquare.utils.feature"/>
       <feature id="org.eclipse.emf.workspace"/>
-      <feature id="org.eclipse.gemoc.modeldebugging.feature.source"/>
-      <feature id="org.eclipse.emf.ecore.source"/>
       <feature id="org.eclipse.m2m.qvt.oml.editor.jdt"/>
-      <feature id="org.eclipse.equinox.p2.core.feature.source"/>
-      <feature id="org.eclipse.gemoc.dsl.feature.source"/>
       <feature id="fr.inria.aoste.timesquare.buddywrapper.feature"/>
-      <feature id="org.eclipse.gemoc.commons.3rdparty.feature.source"/>
       <feature id="org.eclipse.fx.ide.css.feature"/>
       <feature id="org.eclipse.gemoc.execution.concurrent.ccsljavaxdsml.feature"/>
       <feature id="fr.inria.aoste.timesquare.backend.obeoviewpointanimator.feature"/>
-      <feature id="org.eclipse.platform.source"/>
       <feature id="org.eclipse.xtend.sdk"/>
       <feature id="org.eclipse.gemoc.executionframework.feature"/>
-      <feature id="org.eclipse.pde.source"/>
       <feature id="org.eclipse.fx.ide.l10n.feature"/>
       <feature id="org.eclipse.emf.mapping"/>
       <feature id="org.eclipse.emf.ecore"/>
@@ -74,17 +69,14 @@
       <feature id="org.eclipse.gemoc.moccml.constraint.text.editors.feature"/>
       <feature id="org.eclipse.ocl.uml"/>
       <feature id="org.eclipse.m2m.qvt.oml.examples"/>
-      <feature id="org.eclipse.gemoc.trace.commons.feature.source"/>
       <feature id="org.eclipse.emf.compare"/>
       <feature id="org.eclipse.jgit"/>
       <feature id="fr.inria.aoste.trace.feature"/>
       <feature id="org.eclipse.gemoc.moccml.mapping.feature"/>
       <feature id="fr.inria.aoste.timesquare.backend.feature"/>
-      <feature id="org.eclipse.gemoc.dsl.debug.sirius.ui.feature.source"/>
       <feature id="org.eclipse.emf.ecoretools.ale.feature"/>
       <feature id="org.eclipse.emf.mapping.ecore.editor"/>
       <feature id="org.eclipse.fx.ide.fxml.feature"/>
-      <feature id="org.eclipse.e4.rcp.source"/>
       <feature id="org.eclipse.gmf.runtime.thirdparty"/>
       <feature id="fr.kairos.timesquare.safety.feature"/>
       <feature id="org.eclipse.gemoc.ale.interpreted.engine.feature"/>
@@ -102,7 +94,6 @@
       <feature id="org.eclipse.ecf.filetransfer.ssl.feature"/>
       <feature id="org.eclipse.fx.ide.basic.feature"/>
       <feature id="org.eclipse.gemoc.commons.3rdparty.feature"/>
-      <feature id="org.eclipse.gemoc.moccml.constraint.core.feature.source"/>
       <feature id="org.eclipse.userstorage"/>
       <feature id="org.eclipse.emf.query.doc"/>
       <feature id="org.eclipse.ocl.examples.unified"/>
@@ -113,11 +104,8 @@
       <feature id="org.eclipse.gemoc.dsl.debug.ui.feature"/>
       <feature id="org.eclipse.fx.ide.m2e.feature"/>
       <feature id="org.eclipse.emf.databinding.edit"/>
-      <feature id="org.eclipse.jdt.source"/>
       <feature id="org.eclipse.emf.codegen.ecore"/>
       <feature id="org.eclipse.m2e.feature"/>
-      <feature id="org.eclipse.gemoc.moccml.mapping.editor.feature.source"/>
-      <feature id="org.eclipse.gemoc.execution.concurrent.ccsljavaxdsml.feature.source"/>
       <feature id="org.eclipse.gemoc.moccml.constraint.core.feature"/>
       <feature id="fr.inria.aoste.timesquare.duration.model.feature"/>
       <feature id="org.eclipse.emf.query.ocl"/>
@@ -134,20 +122,14 @@
       <feature id="org.eclipse.sirius.specifier"/>
       <feature id="org.eclipse.ocl.edit"/>
       <feature id="org.eclipse.ocl.core.sdk"/>
-      <feature id="org.eclipse.gemoc.dsl.debug.ui.feature.source"/>
-      <feature id="org.eclipse.gemoc.commons.eclipse.feature.source"/>
       <feature id="org.eclipse.ocl.examples"/>
-      <feature id="org.eclipse.gemoc.concurrent_addons.feature.source"/>
       <feature id="fr.inria.aoste.timesquare.ccslkernel.compiler.feature"/>
       <feature id="org.eclipse.ecf.core.feature"/>
       <feature id="org.eclipse.gmf.runtime.notation"/>
       <feature id="org.eclipse.gemoc.dsl.debug.feature"/>
-      <feature id="org.eclipse.gemoc.moccml.mapping.transfos.feature.source"/>
-      <feature id="org.eclipse.gemoc.moccml.constraint.text.editors.feature.source"/>
       <feature id="fr.inria.aoste.timesquare.core.feature"/>
       <feature id="org.eclipse.fx.ide.converter.feature"/>
       <feature id="org.eclipse.sirius.runtime.aql"/>
-      <feature id="org.eclipse.gemoc.moccml.constraint.graphical.editors.feature.source"/>
       <feature id="org.eclipse.gemoc.execution.moccml.feature"/>
       <feature id="org.eclipse.xtext.xbase.lib"/>
       <feature id="org.eclipse.gmf"/>
@@ -155,56 +137,38 @@
       <feature id="org.eclipse.emf.query"/>
       <feature id="org.eclipse.m2m.qvt.oml.doc"/>
       <feature id="org.eclipse.sirius.runtime.ide.xtext"/>
-      <feature id="org.eclipse.emf.query.source"/>
-      <feature id="org.eclipse.gemoc.execution.concurrent.ccsljavaengine.ui.feature.source"/>
-      <feature id="org.eclipse.equinox.p2.user.ui.source"/>
       <feature id="org.eclipse.emf.transaction"/>
       <feature id="org.eclipse.xtext.xbase"/>
-      <feature id="org.eclipse.gemoc.execution.moccml.feature.source"/>
-      <feature id="org.eclipse.emf.common.source"/>
       <feature id="org.eclipse.gemoc.moccml.constraint.ccsl.solver.extension.automata.feature"/>
       <feature id="fr.inria.aoste.timesquare.ccslkernel.model.feature"/>
       <feature id="fr.inria.aoste.timesquare.launcher.feature"/>
       <feature id="org.eclipse.emf.edit.ui"/>
       <feature id="org.eclipse.rcp"/>
-      <feature id="org.eclipse.gemoc.moccml.constraint.ccsl.solver.extension.automata.feature.source"/>
       <feature id="org.eclipse.gemoc.trace.generator.feature"/>
-      <feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.source"/>
       <feature id="org.eclipse.wst.xml_userdoc.feature"/>
       <feature id="org.eclipse.ocl.all"/>
-      <feature id="org.eclipse.gemoc.moccml.feature.source"/>
-      <feature id="org.eclipse.gemoc.dsl.debug.feature.source"/>
-      <feature id="org.eclipse.ecf.filetransfer.httpclient4.feature.source"/>
-      <feature id="org.eclipse.emf.compare.source"/>
       <feature id="fr.inria.aoste.timesquare.backend.vcd.feature"/>
       <feature id="org.eclipse.gemoc.execution.concurrent.ccsljavaengine.ui.feature"/>
       <feature id="org.eclipse.emf.compare.ide.ui"/>
       <feature id="org.eclipse.gemoc.moccml.constraint.graphical.editors.feature"/>
       <feature id="org.eclipse.jdt"/>
       <feature id="org.eclipse.emf.common"/>
-      <feature id="org.eclipse.gemoc.trace.generator.feature.source"/>
-      <feature id="org.eclipse.ecf.core.ssl.feature.source"/>
       <feature id="fr.inria.aoste.timesquare.instantrelation.feature"/>
       <feature id="fr.inria.aoste.timesquare.ccslkernel.runtime.feature"/>
       <feature id="org.eclipse.gemoc.trace.commons.feature"/>
-      <feature id="org.eclipse.gemoc.commons.eclipse.jdt.autosrcfolder.feature.source"/>
-      <feature id="org.eclipse.gemoc.trace.manager.feature.source"/>
       <feature id="org.eclipse.m2m.qvt.oml.debug"/>
       <feature id="fr.inria.aoste.timesquare.explorer.ui.feature"/>
       <feature id="fr.inria.aoste.timesquare.trace.util.feature"/>
       <feature id="org.eclipse.xtext.examples"/>
       <feature id="org.eclipse.emf.ecoretools.registration.feature"/>
-      <feature id="org.eclipse.ecf.filetransfer.feature.source"/>
       <feature id="org.eclipse.fx.runtime.min.feature"/>
       <feature id="fr.inria.aoste.timesquare.launcher.ui.feature"/>
       <feature id="org.eclipse.platform"/>
-      <feature id="org.eclipse.gemoc.execution.sequential.javaxdsml.feature.source"/>
       <feature id="org.eclipse.gemoc.dsl.feature"/>
       <feature id="org.eclipse.emf.ecore.edit"/>
       <feature id="org.eclipse.emf.validation"/>
       <feature id="org.eclipse.e4.rcp"/>
       <feature id="fr.inria.aoste.timesquare.ccslkernel.solver.priorities.model.feature"/>
-      <feature id="org.eclipse.gemoc.xdsmlframework.feature.source"/>
       <feature id="fr.inria.aoste.timesquare.simulationpolicy.feature"/>
       <feature id="org.eclipse.emf.mapping.ecore"/>
       <feature id="org.eclipse.gemoc.commons.eclipse.feature"/>
@@ -212,26 +176,19 @@
       <feature id="org.eclipse.emf.codegen"/>
       <feature id="org.eclipse.wst.xml_ui.feature"/>
       <feature id="org.eclipse.emf"/>
-      <feature id="org.eclipse.rcp.source"/>
       <feature id="fr.inria.aoste.timesquare.ccslkernel.clocktree.feature"/>
       <feature id="org.eclipse.gemoc.execution.sequential.javaxdsml.feature"/>
       <feature id="org.eclipse.emf.query.sdk"/>
       <feature id="org.eclipse.ocl.unified.ui"/>
       <feature id="org.eclipse.gemoc.commons.feature"/>
-      <feature id="org.eclipse.gemoc.execution.concurrent.ccsljavaengine.feature.source"/>
       <feature id="org.eclipse.draw2d"/>
       <feature id="org.eclipse.xtext.runtime"/>
       <feature id="org.eclipse.sirius.properties.feature"/>
-      <feature id="org.eclipse.gemoc.modeldebugging.framework.commons.feature.source"/>
       <feature id="org.eclipse.gemoc.moccml.mapping.transfos.feature"/>
       <feature id="org.eclipse.ocl.examples.classic"/>
       <feature id="fr.inria.aoste.timesquare.duration.editor.feature"/>
-      <feature id="org.eclipse.fx.ide.rrobot.feature"/>
       <feature id="org.eclipse.gemoc.trace.manager.feature"/>
-      <feature id="org.eclipse.ecf.filetransfer.ssl.feature.source"/>
-      <feature id="org.eclipse.gemoc.moccml.mapping.feature.source"/>
       <feature id="org.eclipse.fx.ide.pde.feature"/>
-      <feature id="org.eclipse.gemoc.moccml.mapping.feedback.model.feature.source"/>
       <feature id="org.eclipse.equinox.p2.rcp.feature"/>
       <feature id="org.eclipse.equinox.p2.discovery.feature"/>
       <feature id="org.eclipse.m2m.qvt.oml.runtime"/>
@@ -241,10 +198,8 @@
       <feature id="org.eclipse.epp.mpc"/>
       <feature id="org.aspectj"/>
       <feature id="org.eclipse.gemoc.commons.eclipse.jdt.autosrcfolder.feature"/>
-      <feature id="org.eclipse.equinox.p2.rcp.feature.source"/>
       <feature id="org.eclipse.pde"/>
       <feature id="org.eclipse.xtext.redist"/>
-      <feature id="org.eclipse.gemoc.executionframework.feature.source"/>
       <feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature"/>
       <feature id="fr.inria.aoste.timesquare.ccslkernel.clocktree.generator.feature"/>
       <feature id="org.eclipse.xtext.xtext.ui"/>
@@ -259,17 +214,12 @@
       <feature id="org.eclipse.sirius.runtime"/>
       <feature id="org.eclipse.fx.ide.feature"/>
       <feature id="org.eclipse.gemoc.moccml.feature"/>
-      <feature id="org.eclipse.emf.mwe2.launcher.source"/>
       <feature id="org.eclipse.fx.ide.gmod.feature"/>
       <feature id="org.eclipse.ajdt"/>
       <feature id="org.eclipse.xtext.sdk"/>
-      <feature id="org.eclipse.ecf.core.feature.source"/>
       <feature id="fr.inria.aoste.timesquare.backend.codeexecution.xtext.sdk"/>
       <feature id="org.eclipse.equinox.p2.extras.feature"/>
       <feature id="org.eclipse.ocl"/>
-      <feature id="org.eclipse.gemoc.modeldebugging.framework.commons.k3.feature.source"/>
-      <feature id="org.eclipse.gemoc.commons.feature.source"/>
-      <feature id="org.eclipse.equinox.p2.extras.feature.source"/>
       <feature id="org.eclipse.ocl.all.sdk"/>
       <feature id="org.eclipse.gemoc.dsl.debug.sirius.ui.feature"/>
       <feature id="org.eclipse.ocl.ui"/>
@@ -283,6 +233,15 @@
       <feature id="org.eclipse.emf.ecoretools.sdk"/>
    </features>
 
+   <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+   </configurations>
 
    <preferencesInfo>
       <targetfile overwrite="false"/>
